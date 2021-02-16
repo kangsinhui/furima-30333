@@ -2,16 +2,16 @@
 
 ## users テーブル
 
-| Column                             | Type   | Options      |
-| ---------------------------------- | ------ | ------------ |
-| nickname                           | string | null: false  |
-| email                              | string | unique: true |
-| encrypted_password                 | string | null: false  |
-| family_name                        | string | null: false  |
-| first_name                         | string | null: false  |
-| family_name_kana                   | string | null: false  |
-| first_name_kana                    | string | null: false  |
-| birthday                           | date   | null: false  |
+| Column                             | Type   | Options                   |
+| ---------------------------------- | ------ | ------------------------- |
+| nickname                           | string | null: false               |
+| email                              | string | null: false, unique: true |
+| encrypted_password                 | string | null: false               |
+| family_name                        | string | null: false               |
+| first_name                         | string | null: false               |
+| family_name_kana                   | string | null: false               |
+| first_name_kana                    | string | null: false               |
+| birthday                           | date   | null: false               |
 
 ### Association
 
@@ -24,14 +24,13 @@
 
 | Column                | Type         | Options                        |
 | --------------------- | ------------ | ------------------------------ |
-| image                 |              |                                |
 | name                  | string       | null: false                    |
 | description           | string       | null: false                    |
 | category_id           | integer      | null: false                    |
 | condition_id          | integer      | null: false                    |
 | cost_id               | integer      | null: false                    |
-| area_id               | integer      | null: false                    |
-| days_id               | integer      | null: false                    |
+| prefectures_id        | integer      | null: false                    |
+| day_id                | integer      | null: false                    |
 | price                 | integer      | null: false                    |
 | user                  | references   | null: false, foreign_key: true |
 
