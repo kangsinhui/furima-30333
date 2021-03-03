@@ -2,6 +2,8 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
 
   belongs_to :user
+  has_one :card
+
   has_one_attached :image
   belongs_to_active_hash :category
   belongs_to_active_hash :condition
@@ -19,7 +21,7 @@ class Item < ApplicationRecord
     validates :category_id
     validates :condition_id
     validates :cost_id
-    validates :prefectures_id
+    validates :prefecture_id
     validates :day_id
   end
 
